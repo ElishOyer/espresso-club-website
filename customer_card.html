@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>כרטיס לקוח</title>
   <style>
-    /* CSS styles can be added here */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -103,8 +102,7 @@
             <td>20/02/2024</td>
             <td>ZigZag</td>
           </tr>
-          <!-- Additional past shipments can be added here -->
-        </tbody>
+=        </tbody>
       </table>
     </div>
 
@@ -118,29 +116,23 @@
 
   <script>
     function showTab(tabName) {
-      // Hide all tab contents
       var tabContents = document.getElementsByClassName('tab-content');
       for (var i = 0; i < tabContents.length; i++) {
         tabContents[i].classList.remove('active');
       }
 
-      // Deactivate all tabs
       var tabs = document.getElementsByClassName('tab');
       for (var i = 0; i < tabs.length; i++) {
         tabs[i].classList.remove('active-tab');
       }
 
-      // Show the selected tab content
       document.getElementById(tabName).classList.add('active');
 
-      // Activate the selected tab
       event.target.classList.add('active-tab');
     }
 
     function searchTracking() {
       var trackingNumber = document.getElementById('tracking-number').value;
-      // Code to search for delivery status using tracking number
-      // For demo purposes, let's just display a message
       document.getElementById('delivery-info').innerText = "סטטוס המשלוח עבור מספר מעקב " + trackingNumber + " מתבצע חיפוש...";
     }
   </script>
